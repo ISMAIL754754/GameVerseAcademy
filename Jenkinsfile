@@ -11,7 +11,7 @@ pipeline {
         stage('Scrutation SCM') {
             steps {
                 checkout scm
-                echo 'Code récupéré depuis GitHub'
+                echo 'Code recupere depuis GitHub'
             }
         }
 
@@ -53,13 +53,23 @@ pipeline {
         stage('Archivage') {
             steps {
                 archiveArtifacts artifacts: 'target/*.war', fingerprint: true
-                echo 'WAR archivé dans Jenkins'
+                echo 'WAR archive dans Jenkins'
             }
         }
 
         stage('Deploiement Nexus') {
             steps {
-                bat 'mvn deploy -DskipTests -s settings-nexus.xml'
+                withCredentials([usernamePassword(
+                    credentialsId: 'nexus-credentials',
+                    usernameVariable: 'NEXUS_USER',
+                    passwordVariable: 'NEXUS_PASS')]) {
+                    bat """
+                        mvn deploy -DskipTests ^
+                        -Dnexus-snapshots.username=%NEXUS_USER% ^
+                        -Dnexus-snapshots.password=%NEXUS_PASS% ^
+                        -s settings-nexus.xml
+                    """
+                }
             }
         }
     }
@@ -68,12 +78,12 @@ pipeline {
         success {
             mail to: 'ismailbinar754@gmail.com',
                  subject: "BUILD SUCCESS - GameVerseAcademy #${BUILD_NUMBER}",
-                 body: "Le build #${BUILD_NUMBER} a réussi.\n\nURL: ${BUILD_URL}"
+                 body: "Le build #${BUILD_NUMBER} a reussi.\n\nURL: ${BUILD_URL}"
         }
         failure {
             mail to: 'ismailbinar754@gmail.com',
                  subject: "BUILD FAILURE - GameVerseAcademy #${BUILD_NUMBER}",
-                 body: "Le build #${BUILD_NUMBER} a échoué.\n\nURL: ${BUILD_URL}\n\nVérifiez les logs."
+                 body: "Le build #${BUILD_NUMBER} a echoue.\n\nURL: ${BUILD_URL}\n\nVerifiez les logs."
         }
     }
 }
