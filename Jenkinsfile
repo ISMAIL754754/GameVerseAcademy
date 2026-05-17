@@ -58,20 +58,26 @@ pipeline {
         }
 
         stage('Deploiement Nexus') {
-            steps {
-                withCredentials([usernamePassword(
-                    credentialsId: 'nexus-credentials',
-                    usernameVariable: 'NEXUS_USER',
-                    passwordVariable: 'NEXUS_PASS')]) {
-                    bat """
-                        mvn deploy -DskipTests ^
-                        -Dnexus-snapshots.username=%NEXUS_USER% ^
-                        -Dnexus-snapshots.password=%NEXUS_PASS% ^
-                        -s settings-nexus.xml
-                    """
-                }
-            }
+         steps {
+           withCredentials([usernamePassword(
+            credentialsId: 'nexus-credentials',
+            usernameVariable: 'NEXUS_USER',
+            passwordVariable: 'NEXUS_PASS')]) {
+            bat """
+                echo ^<settings^> > nexus-settings-ci.xml
+                echo   ^<servers^> >> nexus-settings-ci.xml
+                echo     ^<server^> >> nexus-settings-ci.xml
+                echo       ^<id^>nexus-snapshots^</id^> >> nexus-settings-ci.xml
+                echo       ^<username^>%NEXUS_USER%^</username^> >> nexus-settings-ci.xml
+                echo       ^<password^>%NEXUS_PASS%^</password^> >> nexus-settings-ci.xml
+                echo     ^</server^> >> nexus-settings-ci.xml
+                echo   ^</servers^> >> nexus-settings-ci.xml
+                echo ^</settings^> >> nexus-settings-ci.xml
+                mvn deploy -DskipTests -s nexus-settings-ci.xml
+            """
         }
+    }
+}
     }
 
     post {
