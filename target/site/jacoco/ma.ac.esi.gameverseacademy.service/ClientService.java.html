@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClientService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GameVerseAcademy</a> &gt; <a href="index.source.html" class="el_package">ma.ac.esi.gameverseacademy.service</a> &gt; <span class="el_source">ClientService.java</span></div><h1>ClientService.java</h1><pre class="source lang-java linenums">package ma.ac.esi.gameverseacademy.service;
+
+import ma.ac.esi.gameverseacademy.model.Client;
+import ma.ac.esi.gameverseacademy.repository.ClientRepository;
+
+import java.util.List;
+
+<span class="fc" id="L8">public class ClientService {</span>
+
+<span class="fc" id="L10">    private final ClientRepository repo = new ClientRepository();</span>
+
+    // ── Afficher tous les clients ────────────────────────────────
+    public List&lt;Client&gt; getAllClients() {
+<span class="fc" id="L14">        return repo.getAllClients();</span>
+    }
+
+    // ── Afficher un client par ID ────────────────────────────────
+    public Client getClientById(int id) {
+<span class="nc" id="L19">        return repo.getClientById(id);</span>
+    }
+
+    // ── Ajouter un client (INSERT) ───────────────────────────────
+    public String addClient(Client c) {
+<span class="pc bpc" id="L24" title="1 of 4 branches missed.">        if (c.getNom() == null || c.getNom().trim().isEmpty())</span>
+<span class="fc" id="L25">            return &quot;Le nom est obligatoire.&quot;;</span>
+<span class="pc bpc" id="L26" title="1 of 4 branches missed.">        if (c.getPrenom() == null || c.getPrenom().trim().isEmpty())</span>
+<span class="fc" id="L27">            return &quot;Le prénom est obligatoire.&quot;;</span>
+<span class="pc bpc" id="L28" title="1 of 4 branches missed.">        if (c.getEmail() == null || !c.getEmail().contains(&quot;@&quot;))</span>
+<span class="fc" id="L29">            return &quot;Adresse e-mail invalide.&quot;;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (repo.emailExists(c.getEmail(), 0))</span>
+<span class="fc" id="L31">            return &quot;Cet e-mail est déjà utilisé.&quot;;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (c.getSolde() &lt; 0)</span>
+<span class="fc" id="L33">            return &quot;Le solde ne peut pas être négatif.&quot;;</span>
+
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        return repo.insertClient(c) ? null : &quot;Erreur lors de l'insertion en base.&quot;;</span>
+    }
+
+    // ── Modifier un client (UPDATE) ──────────────────────────────
+    public String updateClient(Client c) {
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if (c.getId() &lt;= 0)</span>
+<span class="fc" id="L41">            return &quot;ID client invalide.&quot;;</span>
+<span class="nc bnc" id="L42" title="All 4 branches missed.">        if (c.getNom() == null || c.getNom().trim().isEmpty())</span>
+<span class="nc" id="L43">            return &quot;Le nom est obligatoire.&quot;;</span>
+<span class="nc bnc" id="L44" title="All 4 branches missed.">        if (c.getPrenom() == null || c.getPrenom().trim().isEmpty())</span>
+<span class="nc" id="L45">            return &quot;Le prénom est obligatoire.&quot;;</span>
+<span class="nc bnc" id="L46" title="All 4 branches missed.">        if (c.getEmail() == null || !c.getEmail().contains(&quot;@&quot;))</span>
+<span class="nc" id="L47">            return &quot;Adresse e-mail invalide.&quot;;</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (repo.emailExists(c.getEmail(), c.getId()))</span>
+<span class="nc" id="L49">            return &quot;Cet e-mail est déjà utilisé par un autre client.&quot;;</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">        if (c.getSolde() &lt; 0)</span>
+<span class="nc" id="L51">            return &quot;Le solde ne peut pas être négatif.&quot;;</span>
+
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        return repo.updateClient(c) ? null : &quot;Erreur lors de la mise à jour en base.&quot;;</span>
+    }
+
+    // ── Supprimer un client (DELETE) ─────────────────────────────
+    public String deleteClient(int id) {
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if (id &lt;= 0) return &quot;ID invalide.&quot;;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">        return repo.deleteClient(id) ? null : &quot;Erreur lors de la suppression.&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

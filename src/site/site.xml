@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.8.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0
+                             http://maven.apache.org/xsd/decoration-1.8.0.xsd"
+         name="GameVerseAcademy">
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>2.0.0-M9</version>
+  </skin>
+  <body>
+    <menu name="Rapports qualité">
+      <item name="Résumé"              href="index.html"/>
+      <item name="Couverture (JaCoCo)" href="jacoco/index.html"/>
+      <item name="Checkstyle"          href="checkstyle.html"/>
+      <item name="PMD"                 href="pmd.html"/>
+      <item name="CPD (doublons)"      href="cpd.html"/>
+      <item name="SpotBugs"            href="spotbugs.html"/>
+      <item name="Tests Surefire"      href="surefire-report.html"/>
+    </menu>
+    <menu name="Documentation">
+      <item name="Javadoc"    href="apidocs/index.html"/>
+      <item name="Dépendances" href="dependencies.html"/>
+    </menu>
+    <menu ref="reports"/>
+  </body>
+</project>

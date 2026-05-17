@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Mod.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GameVerseAcademy</a> &gt; <a href="index.source.html" class="el_package">ma.ac.esi.gameverseacademy.model</a> &gt; <span class="el_source">Mod.java</span></div><h1>Mod.java</h1><pre class="source lang-java linenums">package ma.ac.esi.gameverseacademy.model;
+
+
+
+import java.sql.Timestamp;
+
+public class Mod {
+
+
+    private int       id;
+    private String    title;
+    private String    category;
+    private String    author;
+    private String    description;
+    private int       downloads;
+    private Timestamp createdAt;
+    private String    developer;
+    private String    publisher;
+    private String    platform;
+    private String    releaseDate;   
+    private int       metacritic;
+
+    
+    public Mod(int id, String title, String category, String author,
+               String description, int downloads, Timestamp createdAt,
+               String developer, String publisher, String platform,
+<span class="nc" id="L27">               String releaseDate, int metacritic) {</span>
+
+<span class="nc" id="L29">        this.id          = id;</span>
+<span class="nc" id="L30">        this.title       = title;</span>
+<span class="nc" id="L31">        this.category    = category;</span>
+<span class="nc" id="L32">        this.author      = author;</span>
+<span class="nc" id="L33">        this.description = description;</span>
+<span class="nc" id="L34">        this.downloads   = downloads;</span>
+<span class="nc" id="L35">        this.createdAt   = createdAt;</span>
+<span class="nc" id="L36">        this.developer   = developer;</span>
+<span class="nc" id="L37">        this.publisher   = publisher;</span>
+<span class="nc" id="L38">        this.platform    = platform;</span>
+<span class="nc" id="L39">        this.releaseDate = releaseDate;</span>
+<span class="nc" id="L40">        this.metacritic  = metacritic;</span>
+<span class="nc" id="L41">    }</span>
+
+
+<span class="fc" id="L44">    public Mod() {}</span>
+
+    // Getters 
+<span class="fc" id="L47">    public int       getId()          { return id;          }</span>
+<span class="fc" id="L48">    public String    getTitle()       { return title;       }</span>
+<span class="fc" id="L49">    public String    getCategory()    { return category;    }</span>
+<span class="fc" id="L50">    public String    getAuthor()      { return author;      }</span>
+<span class="nc" id="L51">    public String    getDescription() { return description; }</span>
+<span class="fc" id="L52">    public int       getDownloads()   { return downloads;   }</span>
+<span class="nc" id="L53">    public Timestamp getCreatedAt()   { return createdAt;   }</span>
+<span class="nc" id="L54">    public String    getDeveloper()   { return developer;   }</span>
+<span class="nc" id="L55">    public String    getPublisher()   { return publisher;   }</span>
+<span class="nc" id="L56">    public String    getPlatform()    { return platform;    }</span>
+<span class="nc" id="L57">    public String    getReleaseDate() { return releaseDate; }</span>
+<span class="fc" id="L58">    public int       getMetacritic()  { return metacritic;  }</span>
+
+    // Setters
+<span class="fc" id="L61">    public void setId(int id)                   { this.id          = id;          }</span>
+<span class="fc" id="L62">    public void setTitle(String title)           { this.title       = title;       }</span>
+<span class="fc" id="L63">    public void setCategory(String category)     { this.category    = category;    }</span>
+<span class="fc" id="L64">    public void setAuthor(String author)         { this.author      = author;      }</span>
+<span class="nc" id="L65">    public void setDescription(String desc)      { this.description = desc;        }</span>
+<span class="fc" id="L66">    public void setDownloads(int downloads)      { this.downloads   = downloads;   }</span>
+<span class="nc" id="L67">    public void setCreatedAt(Timestamp createdAt){ this.createdAt   = createdAt;   }</span>
+<span class="nc" id="L68">    public void setDeveloper(String developer)   { this.developer   = developer;   }</span>
+<span class="nc" id="L69">    public void setPublisher(String publisher)   { this.publisher   = publisher;   }</span>
+<span class="nc" id="L70">    public void setPlatform(String platform)     { this.platform    = platform;    }</span>
+<span class="nc" id="L71">    public void setReleaseDate(String releaseDate){ this.releaseDate = releaseDate; }</span>
+<span class="fc" id="L72">    public void setMetacritic(int metacritic)    { this.metacritic  = metacritic;  }</span>
+
+   
+    @Override
+    public String toString() {
+<span class="fc" id="L77">        return &quot;Mod{id=&quot; + id + &quot;, title='&quot; + title + &quot;', developer='&quot; + developer + &quot;'}&quot;;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

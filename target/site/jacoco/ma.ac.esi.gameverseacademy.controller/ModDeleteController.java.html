@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ModDeleteController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GameVerseAcademy</a> &gt; <a href="index.source.html" class="el_package">ma.ac.esi.gameverseacademy.controller</a> &gt; <span class="el_source">ModDeleteController.java</span></div><h1>ModDeleteController.java</h1><pre class="source lang-java linenums">package ma.ac.esi.gameverseacademy.controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import ma.ac.esi.gameverseacademy.service.ModService;
+import ma.ac.esi.gameverseacademy.util.SessionUtil;
+import java.io.IOException;
+
+@WebServlet(&quot;/ModDeleteController&quot;)
+<span class="nc" id="L13">public class ModDeleteController extends HttpServlet {</span>
+
+<span class="nc" id="L15">    private ModService modService = new ModService();</span>
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+<span class="nc bnc" id="L21" title="All 2 branches missed.">        if (!SessionUtil.isAuthenticated(request, response)) return;</span>
+
+<span class="nc" id="L23">        String idParam = request.getParameter(&quot;id&quot;);</span>
+<span class="nc bnc" id="L24" title="All 4 branches missed.">        if (idParam != null &amp;&amp; !idParam.trim().isEmpty()) {</span>
+            try {
+<span class="nc" id="L26">                int id = Integer.parseInt(idParam);</span>
+<span class="nc" id="L27">                modService.deleteMod(id);</span>
+<span class="nc" id="L28">            } catch (NumberFormatException e) {</span>
+                // ignorer
+<span class="nc" id="L30">            }</span>
+        }
+<span class="nc" id="L32">        response.sendRedirect(request.getContextPath() + &quot;/mods&quot;);</span>
+<span class="nc" id="L33">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

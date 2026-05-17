@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fichier settings Maven pour Nexus Repository Manager.
+  USAGE : mvn deploy -s settings-nexus.xml
+  Ou copiez ce contenu dans ~/.m2/settings.xml
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <servers>
+    <!-- Identifiants Nexus pour les SNAPSHOTS -->
+    <server>
+      <id>nexus-snapshots</id>
+      <username>admin</username>
+      <!-- Remplacez par votre mot de passe Nexus ou utilisez un token -->
+      <password>x</password>
+    </server>
+    <!-- Identifiants Nexus pour les RELEASES -->
+    <server>
+      <id>nexus-releases</id>
+      <username>admin</username>
+      <password>x</password>
+    </server>
+    <!-- Identifiants pour le site (WebDAV) -->
+    <server>
+      <id>nexus-site</id>
+      <username>admin</username>
+      <password>x</password>
+    </server>
+  </servers>
+
+  <mirrors>
+    <!-- Redirige tous les téléchargements vers Nexus (proxy central) -->
+    <!--
+    <mirror>
+      <id>nexus-all</id>
+      <mirrorOf>*</mirrorOf>
+      <name>Nexus Mirror</name>
+      <url>http://localhost:8081/repository/maven-public/</url>
+    </mirror>
+    -->
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>nexus</id>
+      <repositories>
+        <repository>
+          <id>nexus-central</id>
+          <url>http://localhost:8081/repository/maven-central/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+
+</settings>

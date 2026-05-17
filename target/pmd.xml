@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="7.0.0" timestamp="2026-05-16T23:17:01.914">
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientAddController.java">
+<violation beginline="15" endline="15" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientAddController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="40" rule="NonSerializableClass" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientAddController" variable="service" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#nonserializableclass" priority="3">
+The field 'service' of serializable class 'ma.ac.esi.gameverseacademy.controller.ClientAddController' is of non-serializable type 'ma.ac.esi.gameverseacademy.service.ClientService'.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientController.java">
+<violation beginline="16" endline="16" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientDeleteController.java">
+<violation beginline="14" endline="14" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientDeleteController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="16" endline="16" begincolumn="33" endcolumn="40" rule="NonSerializableClass" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientDeleteController" variable="service" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#nonserializableclass" priority="3">
+The field 'service' of serializable class 'ma.ac.esi.gameverseacademy.controller.ClientDeleteController' is of non-serializable type 'ma.ac.esi.gameverseacademy.service.ClientService'.
+</violation>
+<violation beginline="25" endline="25" begincolumn="33" endcolumn="57" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.controller" class="ClientDeleteController" method="doPost" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="29" endline="31" begincolumn="15" endcolumn="14" rule="EmptyCatchBlock" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientDeleteController" method="doPost" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientEditController.java">
+<violation beginline="15" endline="15" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientEditController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="17" endline="17" begincolumn="33" endcolumn="40" rule="NonSerializableClass" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientEditController" variable="service" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#nonserializableclass" priority="3">
+The field 'service' of serializable class 'ma.ac.esi.gameverseacademy.controller.ClientEditController' is of non-serializable type 'ma.ac.esi.gameverseacademy.service.ClientService'.
+</violation>
+<violation beginline="27" endline="27" begincolumn="32" endcolumn="56" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.controller" class="ClientEditController" method="doGet" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="68" endline="68" begincolumn="68" endcolumn="90" rule="EmptyCatchBlock" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ClientEditController" method="buildClientFromRequest" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\LoginController.java">
+<violation beginline="17" endline="17" begincolumn="20" endcolumn="26" rule="MissingOverride" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.controller" class="LoginController" method="doPost" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'doPost(HttpServletRequest, HttpServletResponse)' is missing an @Override annotation.
+</violation>
+<violation beginline="34" endline="34" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.controller" class="LoginController" method="doPost" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\LogoutController.java">
+<violation beginline="13" endline="13" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="LogoutController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModController.java">
+<violation beginline="15" endline="15" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModDeleteController.java">
+<violation beginline="13" endline="13" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModDeleteController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="15" endline="15" begincolumn="24" endcolumn="34" rule="NonSerializableClass" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModDeleteController" variable="modService" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#nonserializableclass" priority="3">
+The field 'modService' of serializable class 'ma.ac.esi.gameverseacademy.controller.ModDeleteController' is of non-serializable type 'ma.ac.esi.gameverseacademy.service.ModService'.
+</violation>
+<violation beginline="24" endline="24" begincolumn="33" endcolumn="57" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.controller" class="ModDeleteController" method="doPost" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="28" endline="30" begincolumn="15" endcolumn="14" rule="EmptyCatchBlock" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModDeleteController" method="doPost" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#emptycatchblock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModSubmitController.java">
+<violation beginline="14" endline="14" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModSubmitController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="16" endline="16" begincolumn="24" endcolumn="34" rule="NonSerializableClass" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModSubmitController" variable="modService" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#nonserializableclass" priority="3">
+The field 'modService' of serializable class 'ma.ac.esi.gameverseacademy.controller.ModSubmitController' is of non-serializable type 'ma.ac.esi.gameverseacademy.service.ModService'.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModUpdateController.java">
+<violation beginline="14" endline="14" begincolumn="8" endcolumn="13" rule="MissingSerialVersionUID" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModUpdateController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="16" endline="16" begincolumn="24" endcolumn="34" rule="NonSerializableClass" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModUpdateController" variable="modService" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#nonserializableclass" priority="3">
+The field 'modService' of serializable class 'ma.ac.esi.gameverseacademy.controller.ModUpdateController' is of non-serializable type 'ma.ac.esi.gameverseacademy.service.ModService'.
+</violation>
+<violation beginline="27" endline="27" begincolumn="32" endcolumn="56" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.controller" class="ModUpdateController" method="doGet" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="28" endline="28" begincolumn="62" endcolumn="69" rule="AvoidDuplicateLiterals" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.controller" class="ModUpdateController" method="doGet" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#avoidduplicateliterals" priority="3">
+The String literal "/mods" appears 6 times in this file; the first occurrence is on line 28
+</violation>
+<violation beginline="60" endline="60" begincolumn="49" endcolumn="71" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.controller" class="ModUpdateController" method="doPost" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\ClientRepository.java">
+<violation beginline="28" endline="28" begincolumn="13" endcolumn="19" rule="SystemPrintln" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ClientRepository" method="getAllClients" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+Usage of System.out/err
+</violation>
+<violation beginline="35" endline="35" begincolumn="16" endcolumn="19" rule="UnusedLocalVariable" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ClientRepository" method="getClientById" variable="sql" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'sql'.
+</violation>
+<violation beginline="45" endline="45" begincolumn="13" endcolumn="19" rule="SystemPrintln" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ClientRepository" method="getClientById" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+Usage of System.out/err
+</violation>
+<violation beginline="61" endline="61" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ClientRepository" method="emailExists" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="83" endline="83" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ClientRepository" method="insertClient" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="106" endline="106" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ClientRepository" method="updateClient" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="119" endline="119" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ClientRepository" method="deleteClient" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\ModRepository.java">
+<violation beginline="48" endline="48" begincolumn="13" endcolumn="19" rule="SystemPrintln" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ModRepository" method="getAllMods" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+Usage of System.out/err
+</violation>
+<violation beginline="49" endline="49" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ModRepository" method="getAllMods" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="82" endline="82" begincolumn="13" endcolumn="19" rule="SystemPrintln" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ModRepository" method="getModById" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+Usage of System.out/err
+</violation>
+<violation beginline="83" endline="83" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ModRepository" method="getModById" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="100" endline="100" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ModRepository" method="insertMod" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="118" endline="118" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ModRepository" method="updateMod" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="132" endline="132" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="ModRepository" method="deleteMod" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\UserRepository.java">
+<violation beginline="18" endline="18" begincolumn="14" endcolumn="24" rule="CloseResource" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.repository" class="UserRepository" method="userExists" variable="connection" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this Connection object are closed after use
+</violation>
+<violation beginline="19" endline="19" begincolumn="21" endcolumn="30" rule="CloseResource" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.repository" class="UserRepository" method="userExists" variable="statement" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this PreparedStatement object are closed after use
+</violation>
+<violation beginline="26" endline="26" begincolumn="14" endcolumn="23" rule="CloseResource" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.repository" class="UserRepository" method="userExists" variable="resultset" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this ResultSet object are closed after use
+</violation>
+<violation beginline="31" endline="31" begincolumn="4" endcolumn="23" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.repository" class="UserRepository" method="userExists" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\service\ClientService.java">
+<violation beginline="24" endline="24" begincolumn="35" endcolumn="62" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.service" class="ClientService" method="addClient" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="26" endline="26" begincolumn="38" endcolumn="68" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.service" class="ClientService" method="addClient" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="42" endline="42" begincolumn="35" endcolumn="62" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.service" class="ClientService" method="updateClient" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="44" endline="44" begincolumn="38" endcolumn="68" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.service" class="ClientService" method="updateClient" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\service\ModService.java">
+<violation beginline="38" endline="38" begincolumn="39" endcolumn="70" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.service" class="ModService" method="submitMod" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+<violation beginline="47" endline="47" begincolumn="39" endcolumn="70" rule="InefficientEmptyStringCheck" ruleset="Performance" package="ma.ac.esi.gameverseacademy.service" class="ModService" method="updateMod" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_performance.html#inefficientemptystringcheck" priority="3">
+String.trim().length() == 0 / String.trim().isEmpty() is an inefficient way to validate a blank String.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\util\DBUtil.java">
+<violation beginline="24" endline="24" begincolumn="13" endcolumn="19" rule="SystemPrintln" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.util" class="DBUtil" method="getConnection" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+Usage of System.out/err
+</violation>
+<violation beginline="25" endline="25" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.util" class="DBUtil" method="getConnection" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\test\java\ma\ac\esi\gameverseacademy\model\ClientTest.java">
+<violation beginline="28" endline="28" begincolumn="10" endcolumn="32" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="29" endline="29" begincolumn="9" endcolumn="30" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="30" endline="30" begincolumn="9" endcolumn="40" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="31" endline="31" begincolumn="9" endcolumn="36" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="32" endline="32" begincolumn="9" endcolumn="38" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="37" endline="37" begincolumn="10" endcolumn="29" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="42" endline="42" begincolumn="9" endcolumn="49" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="43" endline="43" begincolumn="9" endcolumn="50" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="44" endline="44" begincolumn="9" endcolumn="53" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="45" endline="45" begincolumn="9" endcolumn="55" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="46" endline="46" begincolumn="9" endcolumn="56" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="47" endline="47" begincolumn="9" endcolumn="51" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="48" endline="48" begincolumn="9" endcolumn="57" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="49" endline="49" begincolumn="9" endcolumn="58" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="50" endline="50" begincolumn="9" endcolumn="59" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="51" endline="51" begincolumn="9" endcolumn="62" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="52" endline="52" begincolumn="9" endcolumn="32" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testFullConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="57" endline="57" begincolumn="10" endcolumn="21" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="69" endline="69" begincolumn="9" endcolumn="52" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="70" endline="70" begincolumn="9" endcolumn="53" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="71" endline="71" begincolumn="9" endcolumn="56" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="72" endline="72" begincolumn="9" endcolumn="58" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="73" endline="73" begincolumn="9" endcolumn="60" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="74" endline="74" begincolumn="9" endcolumn="61" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="75" endline="75" begincolumn="9" endcolumn="62" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="76" endline="76" begincolumn="9" endcolumn="37" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testSetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="81" endline="81" begincolumn="10" endcolumn="22" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testToString" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="97" endline="97" begincolumn="9" endcolumn="54" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ClientTest" method="testNegativeSoldeAccepted" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\test\java\ma\ac\esi\gameverseacademy\model\ModTest.java">
+<violation beginline="14" endline="14" begincolumn="10" endcolumn="32" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="16" endline="16" begincolumn="9" endcolumn="27" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="17" endline="17" begincolumn="9" endcolumn="37" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="18" endline="18" begincolumn="9" endcolumn="35" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testDefaultConstructor" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="23" endline="23" begincolumn="10" endcolumn="28" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testSettersGetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="32" endline="32" begincolumn="9" endcolumn="45" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testSettersGetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="33" endline="33" begincolumn="9" endcolumn="50" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testSettersGetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="34" endline="34" begincolumn="9" endcolumn="51" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testSettersGetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="35" endline="35" begincolumn="9" endcolumn="49" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testSettersGetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="36" endline="36" begincolumn="9" endcolumn="52" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testSettersGetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="37" endline="37" begincolumn="9" endcolumn="53" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.model" class="ModTest" method="testSettersGetters" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+</file>
+<file name="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\test\java\ma\ac\esi\gameverseacademy\service\ClientServiceTest.java">
+<violation beginline="35" endline="35" begincolumn="9" endcolumn="34" rule="AvoidAccessibilityAlteration" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="setUp" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#avoidaccessibilityalteration" priority="3">
+You should not modify visibility of constructors, methods or fields using setAccessible()
+</violation>
+<violation beginline="43" endline="43" begincolumn="10" endcolumn="42" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_nomVide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="44" endline="44" begincolumn="36" endcolumn="42" rule="AvoidDuplicateLiterals" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_nomVide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#avoidduplicateliterals" priority="3">
+The String literal "Jean" appears 6 times in this file; the first occurrence is on line 44
+</violation>
+<violation beginline="46" endline="46" begincolumn="9" endcolumn="56" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_nomVide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="53" endline="53" begincolumn="32" endcolumn="40" rule="AvoidDuplicateLiterals" ruleset="Error Prone" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_prenomNull_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_errorprone.html#avoidduplicateliterals" priority="3">
+The String literal "Dupont" appears 6 times in this file; the first occurrence is on line 53
+</violation>
+<violation beginline="55" endline="55" begincolumn="9" endcolumn="59" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_prenomNull_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="63" endline="63" begincolumn="9" endcolumn="57" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_emailInvalide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="73" endline="73" begincolumn="9" endcolumn="61" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_emailDuplique_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="81" endline="81" begincolumn="9" endcolumn="67" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_soldeNegatif_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="86" endline="86" begincolumn="10" endcolumn="47" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_donnéesValides_retourneNull" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="91" endline="91" begincolumn="9" endcolumn="41" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_donnéesValides_retourneNull" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="102" endline="102" begincolumn="9" endcolumn="82" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="addClient_erreurDB_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="109" endline="109" begincolumn="10" endcolumn="48" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="deleteClient_idInvalide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="110" endline="110" begincolumn="9" endcolumn="62" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="deleteClient_idInvalide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="111" endline="111" begincolumn="9" endcolumn="63" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="deleteClient_idInvalide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="119" endline="119" begincolumn="9" endcolumn="44" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="deleteClient_idValide_retourneNull" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="129" endline="129" begincolumn="9" endcolumn="69" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="updateClient_idInvalide_retourneErreur" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="136" endline="136" begincolumn="10" endcolumn="43" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="getAllClients_delegueAuRepository" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+Unit tests should not contain more than 1 assert(s).
+</violation>
+<violation beginline="140" endline="140" begincolumn="9" endcolumn="56" rule="JUnitAssertionsShouldIncludeMessage" ruleset="Best Practices" package="ma.ac.esi.gameverseacademy.service" class="ClientServiceTest" method="getAllClients_delegueAuRepository" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_bestpractices.html#junitassertionsshouldincludemessage" priority="3">
+JUnit assertions should include a message
+</violation>
+</file>
+</pmd>

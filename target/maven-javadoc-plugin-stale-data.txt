@@ -1,0 +1,58 @@
+@options
+@packages
+-classpath
+'C:/Users/ISMAIL/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar;C:/Users/ISMAIL/.m2/repository/jakarta/servlet/jsp/jakarta.servlet.jsp-api/3.1.1/jakarta.servlet.jsp-api-3.1.1.jar;C:/Users/ISMAIL/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/ISMAIL/Downloads/GameVerseAcademy_Maven_Complet/GameVerseAcademy/src/main/java;C:/Users/ISMAIL/Downloads/GameVerseAcademy_Maven_Complet/GameVerseAcademy/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026 <a href="http://www.esi.ac.ma">ESI – École Supérieure d\'Informatique</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/ISMAIL/Downloads/GameVerseAcademy_Maven_Complet/GameVerseAcademy/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'GameVerseAcademy 1.0.0-SNAPSHOT — API Documentation'
+-link
+'https://docs.oracle.com/en/java/javase/17/docs/api'
+-link
+'https://jakarta.ee/specifications/servlet/6.0/apidocs'
+-use
+-version
+-windowtitle
+'GameVerseAcademy API'
+ma.ac.esi.gameverseacademy.controller
+ma.ac.esi.gameverseacademy.model
+ma.ac.esi.gameverseacademy.repository
+ma.ac.esi.gameverseacademy.service
+ma.ac.esi.gameverseacademy.util
+C:\Users\ISMAIL\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.0.0\jakarta.servlet-api-6.0.0.jar = 1773664401388
+C:\Users\ISMAIL\.m2\repository\jakarta\servlet\jsp\jakarta.servlet.jsp-api\3.1.1\jakarta.servlet.jsp-api-3.1.1.jar = 1778956401383
+C:\Users\ISMAIL\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar = 1773664401761
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java = 1778956266429
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\generated-sources\annotations = 1778969606380
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\allclasses-index.html = 1778969630734
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\allpackages-index.html = 1778969630746
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\element-list = 1778969630000
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\help-doc.html = 1778969631054
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\index-all.html = 1778969631009
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\index.html = 1778969630621
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\jquery-ui.overrides.css = 1778969631139
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\member-search-index.js = 1778969630756
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\module-search-index.js = 1778969630748
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\overview-summary.html = 1778969631037
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\overview-tree.html = 1778969630614
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\package-search-index.js = 1778969630751
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\script.js = 1778969631061
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\search.js = 1778969631121
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\serialized-form.html = 1778969630195
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\stylesheet.css = 1778969631058
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\tag-search-index.js = 1778969630830
+C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\target\apidocs\type-search-index.js = 1778969630753

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ModService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GameVerseAcademy</a> &gt; <a href="index.source.html" class="el_package">ma.ac.esi.gameverseacademy.service</a> &gt; <span class="el_source">ModService.java</span></div><h1>ModService.java</h1><pre class="source lang-java linenums">package ma.ac.esi.gameverseacademy.service;
+
+import ma.ac.esi.gameverseacademy.model.Mod;
+import ma.ac.esi.gameverseacademy.repository.ModRepository;
+
+import java.util.List;
+
+<span class="nc" id="L8">public class ModService {</span>
+
+<span class="nc" id="L10">    private ModRepository modRepository = new ModRepository();</span>
+
+    // ── Retourne tous les mods ───────────────────────────────────
+    public List&lt;Mod&gt; getAllMods() {
+<span class="nc" id="L14">        return modRepository.getAllMods();</span>
+    }
+
+    // ── Retourne un mod par son ID ───────────────────────────────
+    public Mod getModById(int id) {
+<span class="nc" id="L19">        return modRepository.getModById(id);</span>
+    }
+
+    // ── Retourne les mods filtrés par catégorie ──────────────────
+    public List&lt;Mod&gt; getModsByCategory(String category) {
+<span class="nc" id="L24">        List&lt;Mod&gt; all      = modRepository.getAllMods();</span>
+<span class="nc" id="L25">        List&lt;Mod&gt; filtered = new java.util.ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">        for (Mod mod : all) {</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">            if (mod.getCategory() != null &amp;&amp;</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">                mod.getCategory().equalsIgnoreCase(category)) {</span>
+<span class="nc" id="L29">                filtered.add(mod);</span>
+            }
+<span class="nc" id="L31">        }</span>
+<span class="nc" id="L32">        return filtered;</span>
+    }
+
+    // ── Création d’un nouveau mod (INSERT) ───────────────────────
+    public boolean submitMod(Mod mod) {
+        // Validation minimale : le titre est obligatoire
+<span class="nc bnc" id="L38" title="All 4 branches missed.">        if (mod.getTitle() == null || mod.getTitle().trim().isEmpty()) {</span>
+<span class="nc" id="L39">            return false;</span>
+        }
+<span class="nc" id="L41">        return modRepository.insertMod(mod);</span>
+    }
+
+    // ✅ UPDATE – met à jour un mod existant
+    public boolean updateMod(Mod mod) {
+        // Validation : le titre est obligatoire
+<span class="nc bnc" id="L47" title="All 4 branches missed.">        if (mod.getTitle() == null || mod.getTitle().trim().isEmpty()) {</span>
+<span class="nc" id="L48">            return false;</span>
+        }
+        // L’ID doit être valide (supérieur à 0)
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        if (mod.getId() &lt;= 0) {</span>
+<span class="nc" id="L52">            return false;</span>
+        }
+<span class="nc" id="L54">        return modRepository.updateMod(mod);</span>
+    }
+
+    // ✅ DELETE – supprime un mod par son ID
+    public boolean deleteMod(int id) {
+<span class="nc bnc" id="L59" title="All 2 branches missed.">        if (id &lt;= 0) {</span>
+<span class="nc" id="L60">            return false;</span>
+        }
+<span class="nc" id="L62">        return modRepository.deleteMod(id);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

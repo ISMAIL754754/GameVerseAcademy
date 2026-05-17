@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GameVerse Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@300;400;500;600;700&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --c0:#04060d;--c1:#080c18;--c2:#0d1225;
+  --neon:#00f0ff;--neon2:#ff2d78;--gold:#f5a623;
+  --text:#dce8ff;--dim:#4a5880;
+}
+html,body{height:100%;overflow:hidden}
+body{
+  background:var(--c0);
+  font-family:'Oxanium',sans-serif;
+  color:var(--text);
+  display:flex;align-items:stretch;
+}
+#bg{position:fixed;inset:0;z-index:0}
+
+.split{
+  position:relative;z-index:1;
+  display:grid;
+  grid-template-columns:1fr 480px;
+  width:100%;min-height:100vh;
+}
+
+.left{
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  justify-content:flex-end;padding:60px;
+}
+.left-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,240,255,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(255,45,120,0.08) 0%, transparent 60%),
+    linear-gradient(160deg,#04060d 0%,#060c1c 100%);
+  z-index:0;
+}
+.left::after{
+  content:'';position:absolute;
+  top:0;right:-1px;bottom:0;width:80px;
+  background:linear-gradient(to bottom right,transparent 49.5%,var(--c0) 50.5%);
+  z-index:2;
+}
+.left::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0px,rgba(0,0,0,0) 3px,rgba(0,240,255,0.012) 3px,rgba(0,240,255,0.012) 4px);
+  z-index:1;pointer-events:none;
+}
+.left-content{position:relative;z-index:3;}
+
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,240,255,0.07);
+  border:1px solid rgba(0,240,255,0.2);
+  border-radius:4px;padding:6px 14px;
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--neon);margin-bottom:28px;width:fit-content;
+  animation:fadeUp 0.8s 0.2s both;
+}
+.badge-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--neon);box-shadow:0 0 8px var(--neon);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
+
+.left-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(56px,7vw,96px);
+  line-height:0.92;letter-spacing:2px;
+  margin-bottom:24px;
+  animation:fadeUp 0.8s 0.35s both;
+}
+.left-title em{
+  font-style:normal;
+  -webkit-text-stroke:2px var(--neon);
+  color:transparent;display:block;
+  text-shadow:0 0 40px rgba(0,240,255,0.3);
+}
+.left-title span{display:block;color:var(--text);}
+
+.left-desc{
+  font-size:14px;color:var(--dim);line-height:1.7;
+  max-width:420px;margin-bottom:40px;font-weight:300;
+  animation:fadeUp 0.8s 0.5s both;
+}
+
+.stats{display:flex;gap:40px;animation:fadeUp 0.8s 0.65s both;}
+.stat-val{
+  font-family:'Bebas Neue',sans-serif;font-size:36px;
+  color:var(--neon);line-height:1;
+  text-shadow:0 0 20px rgba(0,240,255,0.5);
+}
+.stat-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:4px;}
+
+.float-cards{
+  position:absolute;top:80px;right:160px;
+  z-index:1;animation:fadeUp 1s 0.1s both;
+}
+.float-card{
+  width:130px;aspect-ratio:3/4;border-radius:12px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:linear-gradient(160deg,#0d1830,#060d1c);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  position:absolute;overflow:hidden;
+}
+.float-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,240,255,0.05) 0%,transparent 60%);
+}
+.float-card:nth-child(1){top:0;left:0;transform:rotate(-8deg) translate(-20px,20px);background:linear-gradient(135deg,#0d1830,#130821);}
+.float-card:nth-child(2){top:30px;left:55px;transform:rotate(-2deg);z-index:2;}
+.float-card:nth-child(3){top:-10px;left:110px;transform:rotate(6deg) translate(20px,30px);background:linear-gradient(135deg,#0d1820,#181008);}
+.game-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;}
+.card-lbl{position:absolute;bottom:10px;left:8px;right:8px;font-size:8px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4);font-family:'Space Mono',monospace;}
+.card-bar{position:absolute;bottom:0;left:0;right:0;height:2px;}
+.fc1 .card-bar{background:linear-gradient(90deg,var(--neon),transparent)}
+.fc2 .card-bar{background:linear-gradient(90deg,var(--neon2),transparent)}
+.fc3 .card-bar{background:linear-gradient(90deg,var(--gold),transparent)}
+
+.right{
+  background:var(--c0);
+  display:flex;align-items:center;justify-content:center;
+  padding:40px 48px;position:relative;
+  border-left:1px solid rgba(255,255,255,0.04);
+}
+.right::before{
+  content:'';position:absolute;
+  top:15%;bottom:15%;left:-1px;width:2px;
+  background:linear-gradient(to bottom,transparent,var(--neon),var(--neon2),transparent);
+  opacity:0.6;filter:blur(1px);
+}
+
+.form-wrap{width:100%;max-width:360px;animation:fadeUp 0.9s 0.3s both;}
+
+.logo-row{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
+.logo-hex{width:44px;height:44px;position:relative;display:flex;align-items:center;justify-content:center;}
+.logo-hex svg{position:absolute;inset:0;width:100%;height:100%;}
+.logo-hex span{position:relative;z-index:1;font-size:20px;}
+.brand{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;line-height:1;}
+.brand small{display:block;font-family:'Oxanium',sans-serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--dim);font-weight:300;margin-top:2px;}
+
+.form-title{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:2px;line-height:1;margin-bottom:6px;}
+.form-sub{font-size:12px;color:var(--dim);font-weight:300;margin-bottom:32px;}
+.form-sub b{color:var(--neon);font-weight:600;}
+
+.field{margin-bottom:18px;}
+.field-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.field-label span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--dim);font-weight:500;}
+.field-label a{font-size:10px;color:var(--neon);text-decoration:none;letter-spacing:1px;opacity:0.8;transition:opacity 0.2s;}
+.field-label a:hover{opacity:1;}
+
+.input-box{position:relative;display:flex;align-items:center;}
+.input-box::before{
+  content:'';position:absolute;
+  left:0;top:20%;bottom:20%;width:2px;
+  background:var(--dim);border-radius:2px;
+  transition:background 0.3s,box-shadow 0.3s;
+}
+.input-box:focus-within::before{background:var(--neon);box-shadow:0 0 8px var(--neon);}
+
+input[type=text],input[type=password]{
+  width:100%;background:#0a101f;
+  border:1px solid rgba(255,255,255,0.07);
+  border-left:none;border-radius:0 8px 8px 0;
+  padding:13px 44px 13px 18px;
+  font-size:13px;color:var(--text);
+  font-family:'Oxanium',sans-serif;outline:none;
+  transition:border-color 0.3s,background 0.3s;
+}
+input:focus{border-color:rgba(0,240,255,0.25);background:#0c1424;}
+input::placeholder{color:#222d45;font-style:italic;font-family:'Space Mono',monospace;font-size:11px;}
+
+.ico{position:absolute;right:14px;color:var(--dim);font-size:15px;cursor:pointer;transition:color 0.2s,text-shadow 0.2s;user-select:none;}
+.ico:hover{color:var(--neon);text-shadow:0 0 8px var(--neon);}
+
+.check-row{display:flex;align-items:center;gap:10px;margin-bottom:26px;}
+.chk{
+  width:16px;height:16px;background:#0a101f;
+  border:1px solid rgba(255,255,255,0.12);border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;flex-shrink:0;position:relative;
+  transition:border-color 0.2s,background 0.2s;
+}
+.chk input{position:absolute;opacity:0;width:100%;height:100%;cursor:pointer;margin:0;border:none;padding:0;background:transparent;}
+.chk:has(input:checked){background:rgba(0,240,255,0.15);border-color:var(--neon);}
+.chk:has(input:checked)::after{content:'✓';font-size:10px;color:var(--neon);position:absolute;}
+.check-lbl{font-size:12px;color:var(--dim);}
+
+.btn-login{
+  width:100%;padding:0;background:none;border:none;cursor:pointer;margin-bottom:14px;outline:none;
+}
+.btn-inner{
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:15px 24px;
+  background:linear-gradient(100deg,#00c8d4,#00f0ff 40%,#0ad0e0 60%,#00a8ff);
+  border-radius:8px;
+  font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;color:#03080f;
+  box-shadow:0 0 0 1px rgba(0,240,255,0.4),0 8px 32px rgba(0,240,255,0.25),inset 0 1px 0 rgba(255,255,255,0.2);
+  transition:box-shadow 0.25s,transform 0.15s;
+}
+.btn-login:hover .btn-inner{
+  box-shadow:0 0 0 1px rgba(0,240,255,0.7),0 12px 48px rgba(0,240,255,0.45),inset 0 1px 0 rgba(255,255,255,0.3);
+  transform:translateY(-2px);
+}
+.btn-login:active .btn-inner{transform:translateY(0);}
+.btn-inner::after{
+  content:'';position:absolute;
+  top:0;left:-120%;bottom:0;width:80px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+  transform:skewX(-20deg);animation:shimmer 3s 1.5s infinite;
+}
+@keyframes shimmer{0%{left:-120%}60%,100%{left:120%}}
+.btn-arrow{font-size:22px;line-height:1;animation:arrowBounce 1.5s ease-in-out infinite;}
+@keyframes arrowBounce{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+
+.btn-cancel{
+  width:100%;padding:12px;background:transparent;
+  border:1px solid rgba(255,255,255,0.07);border-radius:8px;
+  color:var(--dim);font-family:'Oxanium',sans-serif;
+  font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;
+  transition:border-color 0.2s,color 0.2s;
+}
+.btn-cancel:hover{border-color:rgba(255,45,120,0.4);color:var(--neon2);}
+
+.signup-link{
+  text-align:center;margin-top:28px;font-size:12px;color:var(--dim);
+  padding-top:24px;border-top:1px solid rgba(255,255,255,0.05);
+}
+.signup-link a{color:var(--neon);text-decoration:none;font-weight:600;letter-spacing:0.5px;}
+.signup-link a:hover{text-shadow:0 0 8px var(--neon);}
+
+.corner-deco{
+  position:absolute;top:24px;right:24px;
+  font-family:'Space Mono',monospace;font-size:9px;
+  color:var(--dim);text-align:right;line-height:1.8;opacity:0.5;
+}
+
+.status-bar{
+  position:fixed;bottom:0;left:0;right:0;height:28px;
+  background:#03060f;border-top:1px solid rgba(255,255,255,0.04);
+  display:flex;align-items:center;padding:0 20px;gap:24px;z-index:10;
+}
+.si{display:flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:9px;color:var(--dim);letter-spacing:1px;}
+.sdot{width:5px;height:5px;border-radius:50%;}
+.sg{background:#00ff88;box-shadow:0 0 6px #00ff88;}
+.sb{background:var(--neon);box-shadow:0 0 6px var(--neon);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:900px){
+  .split{grid-template-columns:1fr;}
+  .left{display:none;}
+  .right{border-left:none;}
+  .right::before{display:none;}
+}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="split">
+
+  <!-- LEFT PANEL -->
+  <div class="left">
+    <div class="left-bg"></div>
+    <div class="float-cards">
+      <div class="float-card fc1"><div class="game-art">🗡️</div><div class="card-lbl">Dark Rift v2.4</div><div class="card-bar"></div></div>
+      <div class="float-card fc2"><div class="game-art">🌌</div><div class="card-lbl">Nebula Skin Pack</div><div class="card-bar"></div></div>
+      <div class="float-card fc3"><div class="game-art">🏰</div><div class="card-lbl">Fortress Map #7</div><div class="card-bar"></div></div>
+    </div>
+    <div class="left-content">
+      <div class="badge"><span class="badge-dot"></span>Modding Marketplace</div>
+      <h1 class="left-title">
+        <span>GAME</span>
+        <em>VERSE</em>
+        <span>ACADEMY</span>
+      </h1>
+      <p class="left-desc">Publiez, vendez et partagez vos créations — mods, skins, maps et scripts — avec une communauté mondiale de moddeurs et de joueurs passionnés.</p>
+      <div class="stats">
+        <div><div class="stat-val">12K+</div><div class="stat-lbl">Créations</div></div>
+        <div><div class="stat-val" style="color:var(--neon2);text-shadow:0 0 20px rgba(255,45,120,0.5)">4.8K</div><div class="stat-lbl">Moddeurs</div></div>
+        <div><div class="stat-val" style="color:var(--gold);text-shadow:0 0 20px rgba(245,166,35,0.5)">98+</div><div class="stat-lbl">Jeux</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right">
+    <div class="corner-deco">v1.0.0<br/>AUTH_MODULE<br/>ESI · 2025</div>
+    <div class="form-wrap">
+      <div class="logo-row">
+        <div class="logo-hex">
+          <svg viewBox="0 0 44 44" fill="none">
+            <polygon points="22,2 40,12 40,32 22,42 4,32 4,12" stroke="url(#lg)" stroke-width="1.5" fill="rgba(0,240,255,0.05)"/>
+            <defs><linearGradient id="lg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="#ff2d78"/></linearGradient></defs>
+          </svg>
+          <span>🎮</span>
+        </div>
+        <div class="brand">GameVerse<small>Academy Platform</small></div>
+      </div>
+      <div class="form-title">CONNEXION</div>
+      <p class="form-sub">Identifiez-vous pour continuer. <b>Accès requis.</b></p>
+
+      <form action="LoginController" method="post">
+        <div class="field">
+          <div class="field-label"><span>Email ou Identifiant</span></div>
+          <div class="input-box">
+            <input type="text" name="uname" id="uname" placeholder="admin@gameverseacademy.ma" autocomplete="username"/>
+            <span class="ico">◉</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">
+            <span>Mot de passe</span>
+            <a href="#">Oublié ?</a>
+          </div>
+          <div class="input-box">
+            <input type="password" name="psw" id="psw" placeholder="••••••••••••" autocomplete="current-password"/>
+            <span class="ico" onclick="togglePwd()" title="Afficher">👁</span>
+          </div>
+        </div>
+        <div class="check-row">
+          <label class="chk"><input type="checkbox" name="remember"/></label>
+          <span class="check-lbl">Se souvenir de moi sur cet appareil</span>
+        </div>
+        <button type="submit" class="btn-login">
+          <div class="btn-inner"><span>LOG IN</span><span class="btn-arrow">→</span></div>
+        </button>
+        <button type="reset" class="btn-cancel">Annuler</button>
+      </form>
+
+      <div class="signup-link">Pas encore de compte ? <a href="#">Créer un compte</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="status-bar">
+  <div class="si"><span class="sdot sg"></span>SERVEUR EN LIGNE</div>
+  <div class="si"><span class="sdot sb"></span>CONNEXION SÉCURISÉE</div>
+  <div class="si" style="margin-left:auto">localhost:8080/GameVerseAcademy/</div>
+</div>
+
+<script>
+const canvas=document.getElementById('bg'),ctx=canvas.getContext('2d');
+let W,H,P=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+class Pt{
+  constructor(){this.reset(true)}
+  reset(i){
+    this.x=Math.random()*W;this.y=i?Math.random()*H:H+10;
+    this.r=Math.random()*1.4+0.3;this.s=Math.random()*0.4+0.1;
+    this.o=Math.random()*0.5+0.1;this.d=(Math.random()-.5)*.15;
+    const t=Math.random();
+    this.c=t>.6?`rgba(0,240,255,${this.o})`:t>.3?`rgba(255,45,120,${this.o})`:`rgba(180,200,255,${this.o})`;
+  }
+  update(){this.y-=this.s;this.x+=this.d;if(this.y<-10)this.reset(false);}
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=this.c;ctx.fill();}
+}
+for(let i=0;i<180;i++)P.push(new Pt());
+function loop(){
+  ctx.clearRect(0,0,W,H);
+  for(let i=0;i<P.length;i++){
+    for(let j=i+1;j<P.length;j++){
+      const dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=Math.hypot(dx,dy);
+      if(d<90){ctx.strokeStyle=`rgba(0,240,255,${0.04*(1-d/90)})`;ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(P[i].x,P[i].y);ctx.lineTo(P[j].x,P[j].y);ctx.stroke();}
+    }
+    P[i].update();P[i].draw();
+  }
+  requestAnimationFrame(loop);
+}
+loop();
+function togglePwd(){const i=document.getElementById('psw');i.type=i.type==='password'?'text':'password';}
+</script>
+</body>
+</html>

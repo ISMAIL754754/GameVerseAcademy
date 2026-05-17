@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DBUtil.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GameVerseAcademy</a> &gt; <a href="index.source.html" class="el_package">ma.ac.esi.gameverseacademy.util</a> &gt; <span class="el_source">DBUtil.java</span></div><h1>DBUtil.java</h1><pre class="source lang-java linenums">package ma.ac.esi.gameverseacademy.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+<span class="nc" id="L7">public class DBUtil {</span>
+    private static final String URL =&quot;jdbc:postgresql://localhost:5432/gameverseacademy&quot;;
+    private static final String USER = &quot;postgres&quot;;
+    private static final String PASSWORD = &quot;IsmailKamal2004&quot;;
+
+    static {
+        try {
+<span class="nc" id="L14">            Class.forName(&quot;org.postgresql.Driver&quot;);</span>
+<span class="nc" id="L15">        } catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L16">            throw new RuntimeException(&quot;PostgreSQL JDBC Driver not found&quot;, e);</span>
+<span class="nc" id="L17">        }</span>
+<span class="nc" id="L18">    }</span>
+
+    public static Connection getConnection() {
+        try {
+<span class="nc" id="L22">            return DriverManager.getConnection(URL, USER, PASSWORD);</span>
+<span class="nc" id="L23">        } catch (SQLException e) {</span>
+<span class="nc" id="L24">            System.err.println(&quot;Erreur lors de la connexion à la base de données PostgreSQL !&quot;);</span>
+<span class="nc" id="L25">            e.printStackTrace();</span>
+        }
+<span class="nc" id="L27">        return null;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientAddController.java"
+         totalNumberOfTokens="351"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientController.java"
+         totalNumberOfTokens="82"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientDeleteController.java"
+         totalNumberOfTokens="117"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientEditController.java"
+         totalNumberOfTokens="486"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\LoginController.java"
+         totalNumberOfTokens="119"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\LogoutController.java"
+         totalNumberOfTokens="64"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModController.java"
+         totalNumberOfTokens="82"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModDeleteController.java"
+         totalNumberOfTokens="116"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModSubmitController.java"
+         totalNumberOfTokens="209"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ModUpdateController.java"
+         totalNumberOfTokens="411"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\package-info.java"
+         totalNumberOfTokens="0"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\model\Client.java"
+         totalNumberOfTokens="413"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\model\Mod.java"
+         totalNumberOfTokens="447"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\model\User.java"
+         totalNumberOfTokens="100"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\model\package-info.java"
+         totalNumberOfTokens="0"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\ClientRepository.java"
+         totalNumberOfTokens="803"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\ModRepository.java"
+         totalNumberOfTokens="744"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\UserRepository.java"
+         totalNumberOfTokens="92"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\package-info.java"
+         totalNumberOfTokens="0"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\service\ClientService.java"
+         totalNumberOfTokens="340"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\service\ModService.java"
+         totalNumberOfTokens="252"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\service\UserService.java"
+         totalNumberOfTokens="49"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\service\package-info.java"
+         totalNumberOfTokens="0"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\util\DBUtil.java"
+         totalNumberOfTokens="97"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\util\SessionUtil.java"
+         totalNumberOfTokens="101"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\util\package-info.java"
+         totalNumberOfTokens="0"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\test\java\ma\ac\esi\gameverseacademy\model\ClientTest.java"
+         totalNumberOfTokens="491"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\test\java\ma\ac\esi\gameverseacademy\model\ModTest.java"
+         totalNumberOfTokens="225"/>
+   <file path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\test\java\ma\ac\esi\gameverseacademy\service\ClientServiceTest.java"
+         totalNumberOfTokens="697"/>
+   <duplication lines="12" tokens="173">
+      <file begintoken="178"
+            column="9"
+            endcolumn="2"
+            endline="63"
+            endtoken="350"
+            line="52"
+            path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientAddController.java"/>
+      <file begintoken="866"
+            column="9"
+            endcolumn="2"
+            endline="80"
+            endtoken="1038"
+            line="69"
+            path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\controller\ClientEditController.java"/>
+      <codefragment><![CDATA[        c.setNom(req.getParameter("nom"));
+        c.setPrenom(req.getParameter("prenom"));
+        c.setEmail(req.getParameter("email"));
+        c.setTelephone(req.getParameter("telephone"));
+        c.setPays(req.getParameter("pays"));
+        c.setAbonnement(req.getParameter("abonnement") != null ? req.getParameter("abonnement") : "FREE");
+        try { c.setModsAchetes(Integer.parseInt(req.getParameter("modsAchetes"))); } catch (Exception e) { c.setModsAchetes(0); }
+        try { c.setSolde(Double.parseDouble(req.getParameter("solde"))); } catch (Exception e) { c.setSolde(0.0); }
+        c.setActif("on".equals(req.getParameter("actif")) || "true".equals(req.getParameter("actif")));
+        return c;
+    }
+}
+]]></codefragment>
+   </duplication>
+   <duplication lines="11" tokens="129">
+      <file begintoken="3325"
+            column="9"
+            endcolumn="44"
+            endline="80"
+            endtoken="3453"
+            line="70"
+            path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\ClientRepository.java"/>
+      <file begintoken="3492"
+            column="9"
+            endcolumn="44"
+            endline="102"
+            endtoken="3620"
+            line="92"
+            path="C:\Users\ISMAIL\Downloads\GameVerseAcademy_Maven_Complet\GameVerseAcademy\src\main\java\ma\ac\esi\gameverseacademy\repository\ClientRepository.java"/>
+      <codefragment><![CDATA[        try (Connection conn        = DBUtil.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, c.getNom());
+            stmt.setString(2, c.getPrenom());
+            stmt.setString(3, c.getEmail());
+            stmt.setString(4, c.getTelephone());
+            stmt.setString(5, c.getPays());
+            stmt.setString(6, c.getAbonnement());
+            stmt.setInt(7, c.getModsAchetes());
+            stmt.setDouble(8, c.getSolde());
+            stmt.setBoolean(9, c.isActif());
+]]></codefragment>
+   </duplication>
+</pmd-cpd>

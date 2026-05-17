@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Client.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GameVerseAcademy</a> &gt; <a href="index.source.html" class="el_package">ma.ac.esi.gameverseacademy.model</a> &gt; <span class="el_source">Client.java</span></div><h1>Client.java</h1><pre class="source lang-java linenums">package ma.ac.esi.gameverseacademy.model;
+
+import java.sql.Timestamp;
+
+public class Client {
+
+    private int       id;
+    private String    nom;
+    private String    prenom;
+    private String    email;
+    private String    telephone;
+    private String    pays;
+    private String    abonnement;   // FREE, SILVER, GOLD, PLATINUM
+    private int       modsAchetes;
+    private double    solde;
+    private Timestamp dateInscription;
+    private boolean   actif;
+
+<span class="fc" id="L19">    public Client() {}</span>
+
+    public Client(int id, String nom, String prenom, String email,
+                  String telephone, String pays, String abonnement,
+                  int modsAchetes, double solde,
+<span class="fc" id="L24">                  Timestamp dateInscription, boolean actif) {</span>
+<span class="fc" id="L25">        this.id              = id;</span>
+<span class="fc" id="L26">        this.nom             = nom;</span>
+<span class="fc" id="L27">        this.prenom          = prenom;</span>
+<span class="fc" id="L28">        this.email           = email;</span>
+<span class="fc" id="L29">        this.telephone       = telephone;</span>
+<span class="fc" id="L30">        this.pays            = pays;</span>
+<span class="fc" id="L31">        this.abonnement      = abonnement;</span>
+<span class="fc" id="L32">        this.modsAchetes     = modsAchetes;</span>
+<span class="fc" id="L33">        this.solde           = solde;</span>
+<span class="fc" id="L34">        this.dateInscription = dateInscription;</span>
+<span class="fc" id="L35">        this.actif           = actif;</span>
+<span class="fc" id="L36">    }</span>
+
+    // Getters
+<span class="fc" id="L39">    public int       getId()              { return id;              }</span>
+<span class="fc" id="L40">    public String    getNom()             { return nom;             }</span>
+<span class="fc" id="L41">    public String    getPrenom()          { return prenom;          }</span>
+<span class="fc" id="L42">    public String    getEmail()           { return email;           }</span>
+<span class="fc" id="L43">    public String    getTelephone()       { return telephone;       }</span>
+<span class="fc" id="L44">    public String    getPays()            { return pays;            }</span>
+<span class="fc" id="L45">    public String    getAbonnement()      { return abonnement;      }</span>
+<span class="fc" id="L46">    public int       getModsAchetes()     { return modsAchetes;     }</span>
+<span class="fc" id="L47">    public double    getSolde()           { return solde;           }</span>
+<span class="fc" id="L48">    public Timestamp getDateInscription() { return dateInscription; }</span>
+<span class="fc" id="L49">    public boolean   isActif()            { return actif;           }</span>
+
+    // Setters
+<span class="fc" id="L52">    public void setId(int id)                          { this.id              = id;              }</span>
+<span class="fc" id="L53">    public void setNom(String nom)                     { this.nom             = nom;             }</span>
+<span class="fc" id="L54">    public void setPrenom(String prenom)               { this.prenom          = prenom;          }</span>
+<span class="fc" id="L55">    public void setEmail(String email)                 { this.email           = email;           }</span>
+<span class="fc" id="L56">    public void setTelephone(String telephone)         { this.telephone       = telephone;       }</span>
+<span class="fc" id="L57">    public void setPays(String pays)                   { this.pays            = pays;            }</span>
+<span class="fc" id="L58">    public void setAbonnement(String abonnement)       { this.abonnement      = abonnement;      }</span>
+<span class="fc" id="L59">    public void setModsAchetes(int modsAchetes)        { this.modsAchetes     = modsAchetes;     }</span>
+<span class="fc" id="L60">    public void setSolde(double solde)                 { this.solde           = solde;           }</span>
+<span class="nc" id="L61">    public void setDateInscription(Timestamp d)        { this.dateInscription = d;               }</span>
+<span class="fc" id="L62">    public void setActif(boolean actif)                { this.actif           = actif;           }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L66">        return &quot;Client{id=&quot; + id + &quot;, nom='&quot; + nom + &quot;', email='&quot; + email + &quot;'}&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

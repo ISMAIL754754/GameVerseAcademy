@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ma.ac.esi.gameverseacademy.controller"},{"l":"ma.ac.esi.gameverseacademy.model"},{"l":"ma.ac.esi.gameverseacademy.repository"},{"l":"ma.ac.esi.gameverseacademy.service"},{"l":"ma.ac.esi.gameverseacademy.util"}];updateSearchResults();

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ma.ac.esi.gameverseacademy.service.ClientServiceTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.631 s -- in ma.ac.esi.gameverseacademy.service.ClientServiceTest

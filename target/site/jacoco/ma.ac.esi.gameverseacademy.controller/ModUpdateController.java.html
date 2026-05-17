@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ModUpdateController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GameVerseAcademy</a> &gt; <a href="index.source.html" class="el_package">ma.ac.esi.gameverseacademy.controller</a> &gt; <span class="el_source">ModUpdateController.java</span></div><h1>ModUpdateController.java</h1><pre class="source lang-java linenums">package ma.ac.esi.gameverseacademy.controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import ma.ac.esi.gameverseacademy.model.Mod;
+import ma.ac.esi.gameverseacademy.service.ModService;
+import ma.ac.esi.gameverseacademy.util.SessionUtil;
+import java.io.IOException;
+
+@WebServlet(&quot;/ModUpdateController&quot;)
+<span class="nc" id="L14">public class ModUpdateController extends HttpServlet {</span>
+
+<span class="nc" id="L16">    private ModService modService = new ModService();</span>
+
+    // Afficher le formulaire d'édition pré-rempli
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        // Vérifier l'authentification
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        if (!SessionUtil.isAuthenticated(request, response)) return;</span>
+
+<span class="nc" id="L26">        String idParam = request.getParameter(&quot;id&quot;);</span>
+<span class="nc bnc" id="L27" title="All 4 branches missed.">        if (idParam == null || idParam.trim().isEmpty()) {</span>
+<span class="nc" id="L28">            response.sendRedirect(request.getContextPath() + &quot;/mods&quot;);</span>
+<span class="nc" id="L29">            return;</span>
+        }
+
+        try {
+<span class="nc" id="L33">            int id = Integer.parseInt(idParam);</span>
+<span class="nc" id="L34">            Mod mod = modService.getModById(id);</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">            if (mod == null) {</span>
+<span class="nc" id="L36">                response.sendRedirect(request.getContextPath() + &quot;/mods&quot;);</span>
+<span class="nc" id="L37">                return;</span>
+            }
+<span class="nc" id="L39">            request.setAttribute(&quot;mod&quot;, mod);</span>
+<span class="nc" id="L40">            request.getRequestDispatcher(&quot;/WEB-INF/views/updateMod.jsp&quot;)</span>
+<span class="nc" id="L41">                   .forward(request, response);</span>
+<span class="nc" id="L42">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L43">            response.sendRedirect(request.getContextPath() + &quot;/mods&quot;);</span>
+<span class="nc" id="L44">        }</span>
+<span class="nc" id="L45">    }</span>
+
+    // Traiter la mise à jour
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        if (!SessionUtil.isAuthenticated(request, response)) return;</span>
+
+<span class="nc" id="L54">        String idParam = request.getParameter(&quot;id&quot;);</span>
+<span class="nc" id="L55">        String title = request.getParameter(&quot;title&quot;);</span>
+<span class="nc" id="L56">        String category = request.getParameter(&quot;category&quot;);</span>
+<span class="nc" id="L57">        String author = request.getParameter(&quot;author&quot;);</span>
+<span class="nc" id="L58">        String description = request.getParameter(&quot;description&quot;);</span>
+
+<span class="nc bnc" id="L60" title="All 6 branches missed.">        if (idParam == null || title == null || title.trim().isEmpty()) {</span>
+<span class="nc" id="L61">            response.sendRedirect(request.getContextPath() + &quot;/mods&quot;);</span>
+<span class="nc" id="L62">            return;</span>
+        }
+
+        try {
+<span class="nc" id="L66">            int id = Integer.parseInt(idParam);</span>
+<span class="nc" id="L67">            Mod mod = new Mod();</span>
+<span class="nc" id="L68">            mod.setId(id);</span>
+<span class="nc" id="L69">            mod.setTitle(title);</span>
+<span class="nc" id="L70">            mod.setCategory(category);</span>
+<span class="nc" id="L71">            mod.setAuthor(author);</span>
+<span class="nc" id="L72">            mod.setDescription(description);</span>
+
+<span class="nc" id="L74">            boolean success = modService.updateMod(mod);</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">            if (success) {</span>
+<span class="nc" id="L76">                response.sendRedirect(request.getContextPath() + &quot;/mods&quot;);</span>
+            } else {
+<span class="nc" id="L78">                request.setAttribute(&quot;error&quot;, &quot;❌ Erreur lors de la mise à jour.&quot;);</span>
+<span class="nc" id="L79">                request.setAttribute(&quot;mod&quot;, mod);</span>
+<span class="nc" id="L80">                request.getRequestDispatcher(&quot;/WEB-INF/views/updateMod.jsp&quot;)</span>
+<span class="nc" id="L81">                       .forward(request, response);</span>
+            }
+<span class="nc" id="L83">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L84">            response.sendRedirect(request.getContextPath() + &quot;/mods&quot;);</span>
+<span class="nc" id="L85">        }</span>
+<span class="nc" id="L86">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
